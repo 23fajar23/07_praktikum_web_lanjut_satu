@@ -44,6 +44,14 @@
                         <label for="No_Handphone">No_Handphone</label> <br>
                         <input type="No_Handphone" name="No_Handphone" class="form-control" id="No_Handphone" aria-describedby="No_Handphone" > 
                     </div>
+                    <div class="form-group">
+                        <label for="E_Mail">E-Mail</label> <br>
+                        <input type="E_Mail" name="E_Mail" class="form-control" id="E_Mail" aria-describedby="E_Mail" > 
+                    </div>
+                    <div class="form-group">
+                        <label for="TglLahir">Tanggal Lahir</label> <br>
+                        <input value="yyyy-mm-dd" type="TglLahir" name="TglLahir" class="form-control" id="TglLahir" aria-describedby="TglLahir" > 
+                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
