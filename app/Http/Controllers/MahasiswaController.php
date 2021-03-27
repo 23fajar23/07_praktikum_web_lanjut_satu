@@ -12,11 +12,14 @@ class MahasiswaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //fungsi eloquent menampilkan data menggunakan pagination
         $mahasiswas = Mahasiswa::all(); // Mengambil semua isi tabel
-        $posts = Mahasiswa::paginate(5);
+        $posts = Mahasiswa::when($request->keyword, function ($query) use ($request){
+            $query->where('Nama', 'LIKE', "%{$request->keyword}%");
+        })->paginate(5);
+
         return view('mahasiswas.index', compact('mahasiswas','posts'));
         
     }

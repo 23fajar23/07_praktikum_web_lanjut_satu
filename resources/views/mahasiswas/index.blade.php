@@ -14,6 +14,17 @@
         <div class="float-right my-2">
             <a class="btn btn-success" href="{{ route('mahasiswas.create') }}"> Input Mahasiswa</a>
         </div>
+        <div class="float-left my-2">
+
+            <form action="{{ route('mahasiswas.index') }}" method="GET" role="search">
+                <input type="text" class="form-control mr-2" name="keyword" placeholder="Search" id="keyword">
+                
+        </div>
+        <div class="float-left my-2">
+            <button type="submit" class="btn btn-secondary"> Search </button>
+            </form>
+        </div>
+
     </div>
 </div>
 
