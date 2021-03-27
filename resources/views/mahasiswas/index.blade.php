@@ -1,3 +1,9 @@
+<?php
+    use Illuminate\Support\Facades\DB;
+    use App\Models\Mahasiswa;
+
+?>
+
 @extends('mahasiswas.layout')
 @section('content')
 <div class="row">
@@ -29,7 +35,7 @@
         <th width="280px">Action</th>
     </tr>
 
-    @foreach ($mahasiswas as $Mahasiswa)
+    @foreach ($posts as $Mahasiswa)
 
     <tr>
         <td>{{ $Mahasiswa->Nim }}</td>
@@ -51,4 +57,7 @@
     </tr>
     @endforeach
 </table>
+
+{{ $posts->links('pagination::bootstrap-4') }}
+
 @endsection
